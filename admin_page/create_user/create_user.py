@@ -36,10 +36,10 @@ def create(ui) :
             check_user = check_username(username) 
             if check_user is not True : 
                 create_new_user(username, password, role)
-                QMessageBox.information(ui, "Pendaftaran Berhasil", "User berhasil dibuat.")
+                QMessageBox.information(ui, "Success", "User created.")
             else : 
-                QMessageBox.warning(ui, "Daftar Gagal", "Username existed.")
+                QMessageBox.warning(ui, "Fail", "Username existed.")
         else:
-            QMessageBox.warning(ui, "Daftar Gagal", "Password must be at least 8 characters long and contain at least one number.") 
+            QMessageBox.warning(ui, "Fail", "Password must be at least 8 characters long and contain at least one number.") 
     else:
-        QMessageBox.warning(ui, "Daftar Gagal", "Username must be at least 8 characters long.") 
+        QMessageBox.warning(ui, "Fail", "Username must be at least 8 characters long.") 

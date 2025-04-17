@@ -81,7 +81,11 @@
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);</string>
+             <string notr="true">QLineEdit {
+    color: white;
+    background-color: black;
+    border: 1px solid white; 
+} </string>
             </property>
            </widget>
           </item>
@@ -150,17 +154,32 @@
           </property>
           <item>
            <property name="text">
-            <string>Detect Page</string>
+            <string>Detect</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Admin Page</string>
+            <string>Main</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Main Page</string>
+            <string>Label</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Train</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Report</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Admin</string>
            </property>
           </item>
          </widget>

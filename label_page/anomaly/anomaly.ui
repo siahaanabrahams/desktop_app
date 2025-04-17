@@ -34,7 +34,7 @@
            <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
-           <string>Upload Detection</string>
+           <string>Anomaly Labeling</string>
           </property>
          </widget>
         </item>
@@ -54,8 +54,45 @@
           </property>
          </spacer>
         </item>
-        <item alignment="Qt::AlignmentFlag::AlignLeft">
-         <widget class="QPushButton" name="searchButton">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Coil ID</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="coilIDInput">
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    color: white;
+    background-color: black;
+    border: 1px solid white; 
+} </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="startDetectionButton">
           <property name="font">
            <font>
             <family>Times New Roman</family>
@@ -66,7 +103,19 @@
            <string notr="true">background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
-           <string>Start Video</string>
+           <string>Search</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="tableView">
+          <property name="styleSheet">
+           <string notr="true">QTableView {
+    color: white;
+	font: 15pt &quot;Times New Roman&quot;;
+    background-color: black;
+    border: 1px solid white; 
+} </string>
           </property>
          </widget>
         </item>
@@ -117,7 +166,7 @@
           </property>
           <item>
            <property name="text">
-            <string>Detect</string>
+            <string>Label</string>
            </property>
           </item>
           <item>
@@ -127,7 +176,7 @@
           </item>
           <item>
            <property name="text">
-            <string>Label</string>
+            <string>Detect</string>
            </property>
           </item>
           <item>
@@ -175,7 +224,7 @@
            <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
-           <string>Upload or Real Time</string>
+           <string>Anomaly or Defect</string>
           </property>
          </widget>
         </item>
@@ -208,12 +257,12 @@
           </property>
           <item>
            <property name="text">
-            <string>Upload</string>
+            <string>Anomaly</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Real Time</string>
+            <string>Defect</string>
            </property>
           </item>
          </widget>

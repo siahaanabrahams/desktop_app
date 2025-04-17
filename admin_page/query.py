@@ -36,3 +36,27 @@ def find_username(username) :
         return result
     else : 
         return None 
+    
+def check_password(username, password) :
+    with engine.connect() as conn :
+        query = text("""
+            SELECT password
+            FROM user_admin
+            WHERE username = :username
+        """)
+        password_db = conn.execute(query, {'username' : username}).fetchone()
+        password_db = password_db[0] 
+        if password == password_db : 
+            return True
+        else :
+            return False
+        
+def change_password_que(username, newPassword) :
+    with engine.connect() as conn : 
+        query = text("""
+            UPDATE user_admin
+            SET password = :password
+            WHERE username = :username;
+        """)
+        conn.execute(query, {'username' : username, 'password' : newPassword})
+        conn.commit()

@@ -44,11 +44,7 @@ def handle_login(self, ui):
     self.username = ui.findChild(QLineEdit, 'usernameInput').text()
     self.password = ui.findChild(QLineEdit, 'passwordInput').text()
     username = self.username
-    password = self.password
-    msg_box = QMessageBox()
-    msg_box.setIcon(QMessageBox.Warning)
-    msg_box.setWindowTitle("Login Gagal")
-    msg_box.setStyleSheet("QLabel{ color: white; } QMessageBox { background-color: black; }")
+    password = self.password 
     if username and len(username) >= 8:
         if password and len(password) >= 8:
             auth_ = auth(username, password)
@@ -60,11 +56,8 @@ def handle_login(self, ui):
                 self.id_operation = get_id_operation(id_user)
                 menu_page(self)
             else:
-                msg_box.setText("Please enter a correct username and password")
-                msg_box.exec()
+                QMessageBox.warning(ui, "Fail", "Please enter a correct username and password.")  
         else:
-            msg_box.setText("Please enter a valid password")
-            msg_box.exec()
+            QMessageBox.warning(ui, "Fail", "Please enter a valid password")  
     else:
-        msg_box.setText("Please enter a valid username")
-        msg_box.exec()
+        QMessageBox.warning(ui, "Fail", "Please enter a valid username")  

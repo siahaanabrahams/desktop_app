@@ -39,4 +39,4 @@ def find_user(ui) :
         usernames = [user[0] for user in list_username]
         username_list_widget.addItems(usernames)
     else :
-        QMessageBox.warning(ui, "Pencarian Gagal", "Username not found.") 
+        QMessageBox.warning(ui, "Fail", "Username not found.") 
