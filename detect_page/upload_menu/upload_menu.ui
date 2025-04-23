@@ -113,7 +113,12 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
+           <string notr="true">QComboBox {
+    color: white;
+    background-color: black;
+    border: 1px solid white; 
+	width: 150px;
+}</string>
           </property>
           <item>
            <property name="text">
@@ -204,7 +209,12 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
+           <string notr="true">QComboBox {
+    color: white;
+    background-color: black;
+    border: 1px solid white; 
+	width: 150px;
+}</string>
           </property>
           <item>
            <property name="text">
