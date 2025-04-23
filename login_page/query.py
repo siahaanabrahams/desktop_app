@@ -1,6 +1,13 @@
+import os
+
+from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
-DB_URL = "postgresql+pg8000://postgres:abraham@localhost:5432/postgres"
-engine = create_engine(DB_URL)
+
+load_dotenv()  # Load environment variables from .env file
+
+database_url = os.getenv("DB_URL")
+
+engine = create_engine(database_url) 
 
 def auth(username, password) :
     with engine.connect() as conn : 
